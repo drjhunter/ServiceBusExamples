@@ -8,8 +8,8 @@ namespace ServiceBusSender
 {
     class Program
     {
-        const string ServiceBusConnectionString = "Endpoint=sb://sampleservicebusjh.servicebus.windows.net/;SharedAccessKeyName=SenderPolicyScopedNS;SharedAccessKey=sJoIb3fROht8cCxJtW4Ja/y9TLSuscbYkEIakUC5akU=";
-        const string QueueName = "TestQueue";
+        const string ServiceBusConnectionString = "<YOURVALUE>";
+        const string QueueName = "<YOURVALUE>";
         static IQueueClient queueClient;
 
         static async Task Main(string[] args)
