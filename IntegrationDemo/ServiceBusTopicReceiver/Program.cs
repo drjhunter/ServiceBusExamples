@@ -8,9 +8,9 @@ namespace ServiceBusTopicReceiver
     // reference https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions
     class Program
     {
-        const string ServiceBusConnectionString = "Endpoint=sb://integrationexample.servicebus.windows.net/;SharedAccessKeyName=SendReceivePolicyNS;SharedAccessKey=1475m+7aK2aMIYJi8aVqKgV7dhtmAJ4FlTHOnI+eWjM=";
-        const string TopicName = "orders";
-        const string SubscriptionName = "OrdersSubscriptionConsole";
+        const string ServiceBusConnectionString = "<YOURVALUE>";
+        const string TopicName = "<YOURVALUE>";
+        const string SubscriptionName = "<YOURVALUE>";
         static ISubscriptionClient subscriptionClient;
 
         public static async Task Main(string[] args)
