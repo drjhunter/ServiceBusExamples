@@ -52,6 +52,10 @@ namespace ServiceBusTopicReceiver
             // Process the message.
             Console.WriteLine($"Received message: SequenceNumber:{message.SystemProperties.SequenceNumber} Body:{Encoding.UTF8.GetString(message.Body)}");
 
+            // If we need to deserialize the JSON in order to recreate an object that was serialized by the sender, we will need to know the class type, like this
+            //   var body = Encoding.UTF8.GetString(message.Body);
+            //   var obj = JsonConvert.DeserializeObject<YourClassName>(body);
+            
             // Complete the message so that it is not received again.
             // This can be done only if the subscriptionClient is created in ReceiveMode.PeekLock mode (which is the default).
             await subscriptionClient.CompleteAsync(message.SystemProperties.LockToken);
